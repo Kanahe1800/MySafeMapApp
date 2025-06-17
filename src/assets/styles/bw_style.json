@@ -1,23 +1,23 @@
-export const bwStyle =  {
-    version: 8,
-    sources: {
-        rtile: {
-            type: 'raster',
-            tiles: [
-                'https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png',
-            ],
-            tileSize: 256,
-            attribution:
-                "地図の出典：<a href='https://www.gsi.go.jp/' target='_blank'>地理院タイル</a>",
-        },
-    },
-    layers: [
-        {
-            id: 'raster-tiles',
-            type: 'raster',
-            source: 'rtile',
-            minzoom: 2,
-            maxzoom: 18,
-        },
-    ],
-};
+{
+  "version": 8,
+  "name": "GSI Pale Raster",
+  "sources": {
+    "gsi-pale": {
+      "type": "raster",
+      "tiles": [
+        "https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png"
+      ],
+      "tileSize": 256,
+      "attribution": "国土地理院"
+    }
+  },
+  "layers": [
+    {
+      "id": "gsi-pale-layer",
+      "type": "raster",
+      "source": "gsi-pale",
+      "minzoom": 5,
+      "maxzoom": 18
+    }
+  ]
+}
