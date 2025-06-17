@@ -1,6 +1,8 @@
 {
   "version": 8,
   "name": "GSI Pale Raster",
+  "center": [139.7671, 35.6812],
+  "zoom": 5,
   "sources": {
     "gsi-pale": {
       "type": "raster",
@@ -12,6 +14,13 @@
     }
   },
   "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "#ffffff"
+      }
+    },
     {
       "id": "gsi-pale-layer",
       "type": "raster",
